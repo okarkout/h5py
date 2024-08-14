@@ -69,6 +69,7 @@ def make_new_dset(parent, shape=None, dtype=None, data=None, name=None,
     ):
         errmsg = "Chunk shape must not be greater than data shape in any dimension. "\
                  "{} is not compatible with {}".format(chunks, shape)
+        chunks = shape
         raise ValueError(errmsg)
 
     if isinstance(dtype, Datatype):
